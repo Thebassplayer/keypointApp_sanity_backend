@@ -6,6 +6,11 @@ export default {
   title: 'Concepts',
   fields: [
     {
+      name: 'id',
+      type: 'string',
+      title: 'Id',
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title',
@@ -19,6 +24,17 @@ export default {
       name: 'example',
       type: 'text',
       title: 'Example',
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      description: 'List of tags for this document',
+      of: [{type: 'string'}],
+      default: [''],
+      options: {
+        layout: 'tags',
+      },
     },
   ],
   preview: {
