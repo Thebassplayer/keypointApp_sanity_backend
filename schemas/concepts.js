@@ -16,7 +16,7 @@ export default {
       title: 'Title',
     },
     {
-      name: 'Deprecated Explanation',
+      name: 'deprecated_explanation',
       type: 'text',
       title: 'Deprecated Explanation',
     },
