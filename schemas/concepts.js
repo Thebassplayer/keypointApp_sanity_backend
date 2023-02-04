@@ -26,6 +26,12 @@ export default {
       title: 'Example',
     },
     {
+      name: 'portableText',
+      type: 'array',
+      title: 'Portable text',
+      of: [{type: 'block'}],
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',
