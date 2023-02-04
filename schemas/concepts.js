@@ -16,9 +16,9 @@ export default {
       title: 'Title',
     },
     {
-      name: 'explanation',
+      name: 'Deprecated Explanation',
       type: 'text',
-      title: 'Explanation',
+      title: 'Deprecated Explanation',
     },
     {
       name: 'example',
@@ -26,9 +26,9 @@ export default {
       title: 'Example',
     },
     {
-      name: 'portableText',
+      name: 'explanation',
       type: 'array',
-      title: 'Portable text',
+      title: 'Explanation',
       of: [{type: 'block'}],
     },
     {
