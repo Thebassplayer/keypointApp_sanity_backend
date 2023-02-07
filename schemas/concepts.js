@@ -16,20 +16,15 @@ export default {
       title: 'Title',
     },
     {
-      name: 'deprecated_explanation',
-      type: 'text',
-      title: 'Deprecated Explanation',
+      name: 'explanation',
+      type: 'array',
+      title: 'Explanation',
+      of: [{type: 'block'}],
     },
     {
       name: 'example',
       type: 'text',
       title: 'Example',
-    },
-    {
-      name: 'explanation',
-      type: 'array',
-      title: 'Explanation',
-      of: [{type: 'block'}],
     },
     {
       name: 'tags',
@@ -46,13 +41,11 @@ export default {
   preview: {
     select: {
       title: 'title',
-      explanation: 'explanation',
     },
     prepare(selection) {
-      const {title, explanation} = selection
+      const {title} = selection
       return {
         title: title,
-        subtitle: explanation,
       }
     },
   },

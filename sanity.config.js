@@ -1,3 +1,4 @@
+import {media} from 'sanity-plugin-media'
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
@@ -10,7 +11,7 @@ export default defineConfig({
   projectId: 'b80jazms',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool(), visionTool(), media()],
 
   schema: {
     types: schemaTypes,
