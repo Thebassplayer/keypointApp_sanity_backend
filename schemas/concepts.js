@@ -19,7 +19,32 @@ export default defineType({
       name: 'explanation',
       title: 'Explanation',
       type: 'array',
-      of: [defineArrayMember({type: 'block'})],
+      of: [
+        defineArrayMember({
+          type: 'block',
+          marks: {
+            decorators: [
+              {title: 'Strong', value: 'strong'},
+              {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
+              {title: 'Underline', value: 'underline'},
+              {title: 'Strike', value: 'strike-through'},
+            ],
+          },
+        }),
+        defineArrayMember({
+          type: 'code',
+          options: {
+            language: 'javascript',
+            languageAlternatives: [
+              {title: 'Javascript', value: 'javascript'},
+              {title: 'HTML', value: 'html'},
+              {title: 'CSS', value: 'css'},
+            ],
+            withFilename: true,
+          },
+        }),
+      ],
     }),
     defineField({
       name: 'codeField',
