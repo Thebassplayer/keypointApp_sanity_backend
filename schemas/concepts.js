@@ -1,4 +1,4 @@
-import {defineType, defineField} from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity'
 
 export default defineType({
   name: 'concepts',
@@ -17,9 +17,23 @@ export default defineType({
     }),
     defineField({
       name: 'explanation',
-      type: 'array',
       title: 'Explanation',
+      type: 'array',
       of: [defineArrayMember({type: 'block'})],
+    }),
+    defineField({
+      name: 'codeField',
+      type: 'code',
+      title: 'Code',
+      options: {
+        language: 'javascript',
+        languageAlternatives: [
+          {title: 'Javascript', value: 'javascript'},
+          {title: 'HTML', value: 'html'},
+          {title: 'CSS', value: 'css'},
+        ],
+        withFilename: true,
+      },
     }),
     defineField({
       name: 'example',
