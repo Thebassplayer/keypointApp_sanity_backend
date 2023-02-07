@@ -1,32 +1,32 @@
-// import {Code} from '@sanity/block-content-to-react'
+import {defineType, defineField} from 'sanity'
 
-export default {
+export default defineType({
   name: 'concepts',
   type: 'document',
   title: 'Concepts',
   fields: [
-    {
+    defineField({
       name: 'id',
       type: 'string',
       title: 'Id',
-    },
-    {
+    }),
+    defineField({
       name: 'title',
       type: 'string',
       title: 'Title',
-    },
-    {
+    }),
+    defineField({
       name: 'explanation',
       type: 'array',
       title: 'Explanation',
-      of: [{type: 'block'}],
-    },
-    {
+      of: [defineArrayMember({type: 'block'})],
+    }),
+    defineField({
       name: 'example',
       type: 'text',
       title: 'Example',
-    },
-    {
+    }),
+    defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
@@ -36,7 +36,7 @@ export default {
       options: {
         layout: 'tags',
       },
-    },
+    }),
   ],
   preview: {
     select: {
@@ -49,4 +49,4 @@ export default {
       }
     },
   },
-}
+})
