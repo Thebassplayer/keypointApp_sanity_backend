@@ -72,7 +72,7 @@ export default defineType({
       title: 'Tags',
       type: 'array',
       description: 'List of tags for this document',
-      of: [{type: 'string'}],
+      of: [{name: 'tag', type: 'string'}],
       default: [''],
       options: {
         layout: 'tags',
@@ -82,13 +82,13 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      tags: 'tags',
+      tag: 'tag',
     },
     prepare(selection) {
-      const {title, tags} = selection
+      const {title, tag} = selection
       return {
         title: title,
-        subtitle: tags,
+        subtitle: tag,
       }
     },
   },
