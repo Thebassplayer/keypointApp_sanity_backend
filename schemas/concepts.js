@@ -1,4 +1,5 @@
 import {defineType, defineField, defineArrayMember} from 'sanity'
+import InlineCode from '../components/inlineCode.component'
 
 export default defineType({
   name: 'concepts',
@@ -31,6 +32,7 @@ export default defineType({
               {title: 'Strike', value: 'strike-through'},
             ],
           },
+          styles: [{title: 'Code', value: 'code', component: InlineCode}],
         }),
         defineArrayMember({
           type: 'code',
@@ -80,6 +82,7 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
+      tags: 'tags',
     },
     prepare(selection) {
       const {title} = selection
