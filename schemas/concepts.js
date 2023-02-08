@@ -85,9 +85,10 @@ export default defineType({
       tags: 'tags',
     },
     prepare(selection) {
-      const {title} = selection
+      const {title, tags} = selection
       return {
         title: title,
+        subtitle: tags,
       }
     },
   },
